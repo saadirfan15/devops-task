@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Skyline — Ship Faster</title>
+  <meta name="description" content="Skyline: a demo landing page for a DevOps pipeline project.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="#" class="logo"><span class="logo-mark">◆</span> Skyline</a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#features">Features</a>
+        <a href="#pipeline">Pipeline</a>
+        <a href="#stats">Stats</a>
+        <a href="#contact" class="btn btn-small">Get started</a>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">◐</button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="container hero-inner">
+        <span class="pill">🚀 v1.0 is live</span>
+        <h1>Build. Test. Deploy.<br><span class="gradient-text">Without the drama.</span></h1>
+        <p class="lead">Skyline turns every commit into a production-ready release with automated pipelines, containers, and zero-downtime deploys.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn">Start free</a>
+          <a href="#pipeline" class="btn btn-ghost">See how it works →</a>
+        </div>
+        <div class="terminal">
+          <div class="terminal-bar"><i></i><i></i><i></i><span>bash</span></div>
+          <pre id="terminalText"></pre>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="section">
+      <div class="container">
+        <h2 class="section-title reveal">Everything your pipeline needs</h2>
+        <div class="grid">
+          <article class="card reveal"><div class="icon">⚙️</div><h3>CI on every push</h3><p>Lint, test and build automatically the moment code lands on a branch.</p></article>
+          <article class="card reveal"><div class="icon">🐳</div><h3>Containers first</h3><p>Every build ships as a lean Docker image, identical from laptop to prod.</p></article>
+          <article class="card reveal"><div class="icon">☁️</div><h3>Deploy anywhere</h3><p>Push to any cloud or Kubernetes cluster with a single config file.</p></article>
+          <article class="card reveal"><div class="icon">📈</div><h3>Built-in monitoring</h3><p>Health checks, logs and alerts so you know before your users do.</p></article>
+          <article class="card reveal"><div class="icon">🔒</div><h3>Secure by default</h3><p>Secrets management and image scanning baked into every stage.</p></article>
+          <article class="card reveal"><div class="icon">↩️</div><h3>One-click rollback</h3><p>Something broke? Return to the last good release in seconds.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="pipeline" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title reveal">From commit to production</h2>
+        <ol class="pipeline">
+          <li class="reveal"><span>1</span><h4>Commit</h4><p>Push code to GitHub</p></li>
+          <li class="reveal"><span>2</span><h4>Build</h4><p>Docker image created</p></li>
+          <li class="reveal"><span>3</span><h4>Test</h4><p>Automated checks run</p></li>
+          <li class="reveal"><span>4</span><h4>Deploy</h4><p>Live with zero downtime</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="stats" class="section">
+      <div class="container stats">
+        <div class="stat reveal"><strong data-count="99.9">0</strong><span>% uptime</span></div>
+        <div class="stat reveal"><strong data-count="12">0</strong><span>sec avg deploy</span></div>
+        <div class="stat reveal"><strong data-count="5000">0</strong><span>+ builds / day</span></div>
+        <div class="stat reveal"><strong data-count="0">0</strong><span>sleepless nights</span></div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container cta reveal">
+        <h2>Ready to ship faster?</h2>
+        <p>Drop your email and we'll get you set up.</p>
+        <form class="cta-form" id="ctaForm">
+          <input type="email" placeholder="you@example.com" required aria-label="Email">
+          <button class="btn" type="submit">Join</button>
+        </form>
+        <p class="form-msg" id="formMsg" role="status"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">© <span id="year"></span> Skyline · Built for the devops-task project</div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
