@@ -1,0 +1,20 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build Docker image
+        run: docker build -t devops-task:${{ github.sha }} .
+      - name: Smoke test
+        run: |
+          docker run -d -p 8080:80 --name web devops-task:${{ github.sha }}
+          sleep 3
+          curl -fsS http://localhost:8080 | grep -q "Skyline"
